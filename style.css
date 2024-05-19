@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: black;
+   
+}
+
+.choice {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black; /* Set background color to black */
+    color: #ffffff; /* Default text color */
+    position: relative; /* Required for pseudo-element */
+  }
+  
+  .choice:hover{
+    box-shadow: 0 0 20px 5px rgba(0, 0, 255, 0.7); /* Add a neon blue glow on hover */
+    background-color: #00008b; /* Change background color to a darker blue */
+    cursor: pointer;
+  }
+  
+  .choice::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 50px 15px rgba(0, 0, 255, 0); /* Initial transparent glow */
+    opacity: 0;
+    animation: glow 1.5s infinite alternate; /* Animation for glowing effect */
+  }
+  
+  .choice:hover::before {
+    opacity: 1; /* Make the glow visible on hover */
+  }
+  
+  @keyframes glow {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+.choices{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    gap: 60px;
+}
+h1{
+
+    color:   white;
+    height: 60px;
+    line-height: 60px;
+}
+.score-section{
+    color: #ffffff;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 50px;
+     gap: 35px;
+     margin-top: 70px;
+}
+.msg{
+    margin-top: 5rem;
+    padding:10px;
+    
+   
+}
+#scoreusre,#scorecomputer{
+    font-size: 60px;
+}
+#m{
+     font-size: 60px;
+     display: inline;
+     background-color: aqua; 
+     border-radius: 1rem;
+}
+
+.reset{
+  font-size: 40px ;
+  background-color: aqua;
+  border-radius: 1rem;
+  display: inline;
+  border: none;
+  
+}
+.resetbu{
+  margin-top: 4rem ;
+}
